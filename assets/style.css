@@ -1,0 +1,216 @@
+:root{
+  --navy:#0a1c40; --navy-d:#071531; --navy-dd:#050f24; --navy-l:#12336b; --navy-ll:#1b407f;
+  --blue:#2f6fd6; --blue-h:#3f7fe6; --green:#33b24a; --green-h:#3cc154;
+  --gold:#ffd21e; --gold-d:#e6b800; --red:#c61c36;
+  --line:#1d3560; --txt:#eaf0fb; --mut:#9fb0d0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,system-ui,Arial,sans-serif;background:var(--navy);color:var(--txt);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1360px;margin:0 auto;padding:0 16px}
+
+/* Header */
+header{background:var(--navy-dd);border-bottom:1px solid var(--line)}
+.hdr{display:flex;align-items:center;gap:20px;padding:12px 16px;max-width:1360px;margin:0 auto;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:9px;flex:none}
+.logo .q{width:42px;height:42px;background:radial-gradient(circle at 50% 35%,#e23b4e,#a4142a);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.logo .name{font-size:27px;font-weight:900;letter-spacing:-1px;color:#fff}
+.logo .name span{color:var(--gold)}
+.hdr-forms{margin-left:auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.promo-btn{display:flex;align-items:center;gap:7px;background:var(--gold);color:#3a2c00;font-weight:800;padding:9px 15px;border-radius:8px;font-size:13px}
+.promo-btn .gift{font-size:16px}
+.login-inputs{display:flex;gap:8px}
+.login-inputs input{background:#fff;border:none;border-radius:7px;padding:9px 12px;font-size:13px;width:150px;color:#1a1a1a}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:800;border-radius:8px;padding:0 18px;height:40px;cursor:pointer;border:none;font-size:14px;white-space:nowrap}
+.btn-login{background:var(--blue);color:#fff}.btn-login:hover{background:var(--blue-h)}
+.btn-reg{background:var(--green);color:#fff}.btn-reg:hover{background:var(--green-h)}
+.btn-gold{background:var(--gold);color:#3a2c00}.btn-gold:hover{filter:brightness(1.06)}
+.freezone{display:flex;flex-direction:column;align-items:center;gap:2px;flex:none;color:var(--gold);font-weight:800;font-size:11px;text-align:center}
+.freezone .fz{width:38px;height:38px;background:linear-gradient(135deg,#ffd21e,#e6a800);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+
+/* Menu */
+.menu{background:var(--navy-l);border-bottom:3px solid var(--gold)}
+.menu ul{list-style:none;display:flex;gap:4px;max-width:1360px;margin:0 auto;padding:0 12px;overflow-x:auto;scrollbar-width:none}
+.menu ul::-webkit-scrollbar{display:none}
+.menu a{display:block;padding:14px 14px;font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.3px;color:#dbe6fb;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-3px}
+.menu a:hover,.menu a.on{color:#fff;border-bottom-color:var(--gold)}
+.menu a.wc img,.menu a .ss{height:18px;vertical-align:middle}
+.menu a.gold{color:var(--gold)}
+.fzbar{background:var(--red);color:#fff;text-align:center;font-weight:800;font-size:13px;padding:6px;letter-spacing:.3px}
+
+/* Welcome banner (immagine col testo già incluso) */
+.hero-banner{position:relative;border-radius:14px;overflow:hidden;margin:18px 0;background:#0a1c40;line-height:0;font-size:0}
+.hero-banner__link{display:block}
+.hero-banner img{width:100%;display:block}
+.hero-banner__cta{position:absolute;left:4%;bottom:12%;height:44px;font-size:15px;padding:0 26px}
+@media(max-width:640px){.hero-banner__cta{display:none}}
+
+/* Hero H1 + lead */
+.hero-txt{padding:6px 2px 4px}
+.hero-txt h1{font-size:26px;font-weight:900;color:#fff;margin-bottom:8px;line-height:1.2}
+.hero-txt p{color:var(--mut);max-width:900px}
+
+/* Carousel rows */
+.row-block{margin:26px 0}
+.row-head{display:flex;align-items:baseline;gap:12px;margin-bottom:12px}
+.row-head h2,.row-head h3{font-size:19px;font-weight:800;color:#fff}
+.row-head .sub{color:var(--mut);font-size:13px}
+.row-head .all{margin-left:auto;color:var(--gold);font-weight:800;font-size:13px;white-space:nowrap}
+.row-head .all:hover{text-decoration:underline}
+.scroller{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
+.scroller::-webkit-scrollbar{height:7px}
+.scroller::-webkit-scrollbar-thumb{background:var(--navy-ll);border-radius:4px}
+.tile{flex:none;width:172px;border-radius:12px;overflow:hidden;background:var(--navy-l);border:1px solid var(--line);aspect-ratio:1/1;position:relative;transition:transform .12s}
+.tile:hover{transform:translateY(-4px)}
+.tile img{width:100%;height:100%;object-fit:cover}
+.tile--wide{width:230px;aspect-ratio:16/10}
+
+/* Slot Supreme promo */
+.supreme{margin:26px 0}
+.supreme__banner{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(120deg,#1a1030,#3a1c5c)}
+.supreme__banner{max-width:1000px;margin:0 auto;border-radius:10px;overflow:hidden}
+.supreme__banner img{width:100%;display:block}
+
+/* Categories (4) */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:26px 0}
+.cat{position:relative;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,var(--navy-l),var(--navy-ll));border:1px solid var(--line);padding:22px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;transition:transform .12s}
+.cat:hover{transform:translateY(-4px);border-color:var(--gold)}
+.cat__ic{width:64px;height:64px;object-fit:contain;filter:drop-shadow(0 3px 6px rgba(0,0,0,.4))}
+.cat__ic-ph{width:64px;height:64px;border-radius:14px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:30px}
+.cat h4{font-size:16px;font-weight:800;color:#fff}
+.cat p{font-size:12.5px;color:var(--gold);font-weight:700}
+
+/* SEO */
+.seo{background:var(--navy-d);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin:26px 0}
+.seo h1{font-size:24px;font-weight:900;color:#fff;margin-bottom:14px}
+.seo h2{font-size:19px;font-weight:800;color:var(--gold);margin:24px 0 10px}
+.seo h3{font-size:15.5px;font-weight:800;color:#fff;margin:18px 0 8px}
+.seo p{color:#c7d3e8;margin-bottom:12px}
+.seo a{color:var(--gold);font-weight:600}
+.seo ul,.seo ol{margin:10px 0 14px 6px;list-style:none;color:#c7d3e8}
+.seo li{position:relative;padding:5px 0 5px 22px}
+.seo ul li:before{content:"";position:absolute;left:2px;top:12px;width:7px;height:7px;border-radius:2px;background:var(--gold)}
+.seo ol{counter-reset:n}.seo ol li{counter-increment:n}
+.seo ol li:before{content:counter(n);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:5px;background:var(--gold);color:#3a2c00;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+
+/* Sottopagine: breadcrumb + intestazione + cluster-nav */
+.crumb{font-size:12px;color:var(--mut);margin:16px 0 10px;font-weight:600}
+.crumb a{color:var(--gold)}
+.pageHead{background:linear-gradient(120deg,var(--navy-l),var(--navy-ll));border-radius:14px;padding:22px 26px;margin-bottom:18px;position:relative;overflow:hidden}
+.pageHead:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold)}
+.pageHead .kick{font-size:12.5px;font-weight:700;letter-spacing:.5px;color:var(--gold);text-transform:uppercase}
+.pageHead h1{font-size:24px;font-weight:900;color:#fff;margin-top:6px;line-height:1.25}
+.clusterNav{display:flex;gap:6px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.clusterNav a{font-size:13px;font-weight:700;color:var(--mut);padding:7px 12px;border-radius:7px}
+.clusterNav a:hover{background:var(--navy-l);color:#fff}
+.clusterNav a.on{background:var(--gold);color:#3a2c00}
+.clusterFoot{display:flex;gap:8px 16px;flex-wrap:wrap;padding:16px 0 4px;border-top:1px solid var(--line);font-size:13px;margin-top:16px}
+.clusterFoot a{color:var(--gold);font-weight:700}
+
+/* tabelle multi-colonna (confronto bonus ecc) */
+.mdtable{overflow-x:auto;margin:14px 0}
+.mdtable table{width:100%;border-collapse:collapse;font-size:13.5px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.mdtable th,.mdtable td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;color:#c7d3e8}
+.mdtable th{background:var(--navy-l);color:#fff;font-weight:800}
+.mdtable tr:last-child td{border-bottom:none}
+
+/* FAQ accordion */
+.faq details{border:1px solid var(--line);border-radius:8px;margin-bottom:9px;overflow:hidden;background:var(--navy-l)}
+.faq summary{cursor:pointer;padding:14px 16px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px;color:#fff}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--gold);font-weight:800;font-size:19px}
+.faq details[open] summary:after{content:"–"}
+.faq .ans{padding:0 16px 14px;color:#c7d3e8}
+
+/* CTA box nelle sottopagine */
+.ctabox{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:linear-gradient(120deg,var(--navy-ll),var(--blue));border-radius:12px;padding:18px 22px;margin:20px 0;color:#fff}
+.ctabox b{color:var(--gold)}
+.ctabox .btn{height:42px;padding:0 24px}
+.ctabox a.btn-gold{color:#3a2c00}
+
+/* modello email/testo da copiare */
+.mailbox{background:var(--navy-d);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.7;color:#dbe6fb;white-space:pre-wrap}
+.mailbox .lab{font-family:'Segoe UI',Roboto,system-ui,Arial,sans-serif;font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--gold);margin-bottom:8px}
+
+/* nota breve (avviso/consiglio) */
+.note{background:rgba(255,210,30,.08);border-left:4px solid var(--gold-d);border-radius:0 8px 8px 0;padding:12px 16px;margin:14px 0;color:#dbe6fb;font-size:13.5px}
+
+/* pro/contro */
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.pc .col{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--navy-l)}
+.pc h3{margin:0 0 10px;font-size:15px}
+.pc .pro h3{color:var(--green)}.pc .con h3{color:var(--red)}
+.pc ul{margin:0}.pc li{padding:5px 0 5px 24px;font-size:13.5px}
+.pc ul li:before{content:none}
+.pc .pro li:before{content:"✓";position:absolute;left:2px;color:var(--green);font-weight:800}
+.pc .con li:before{content:"–";position:absolute;left:4px;color:var(--red);font-weight:800}
+@media(max-width:640px){.pc{grid-template-columns:1fr}}
+
+/* Footer */
+footer{background:var(--navy-dd);border-top:1px solid var(--line);margin-top:26px;padding:26px 16px;color:var(--mut)}
+.foot-in{max-width:1360px;margin:0 auto}
+.foot-nav{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:16px}
+.foot-nav a{color:#cdd9ef;font-weight:600;font-size:13px}
+.foot-nav a:hover{color:#fff}
+.foot-comp{display:flex;align-items:flex-start;gap:14px;background:var(--navy-d);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:12.5px;line-height:1.55;margin-bottom:12px}
+.foot-comp .age{flex:none;width:38px;height:38px;border-radius:50%;border:2px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px}
+.foot-low{font-size:12px;color:#6f7f9f}
+
+@media(max-width:960px){
+  .cats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  .hdr{gap:12px}
+  .seo{padding:20px}
+  .tile{width:140px}
+  .logo .name{font-size:22px}
+}
+
+/* App download box (pagina /app/) */
+.appBox{background:var(--navy-l);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:16px 0 22px}
+.appHead{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.appIco{width:60px;height:60px;border-radius:16px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:30px;flex:none}
+.appMeta{flex:1;min-width:220px}
+.appName{font-size:19px;font-weight:900;color:#fff}
+.appRate{font-size:13px;color:var(--mut);margin:3px 0 12px}.appRate b{color:var(--gold)}
+.appBtns{display:flex;gap:10px;flex-wrap:wrap}
+.appBox .btn.appDl{background:var(--gold);color:#3a2c00;padding:0 20px}
+.appBox .btn.appDl.ios{background:var(--navy-ll);color:#fff;border:1px solid var(--line)}
+.appSpec{width:100%;border-collapse:collapse;margin-top:18px;font-size:13.5px}
+.appSpec td{border-top:1px solid var(--line);padding:9px 4px;color:#c7d3e8}
+.appSpec td:first-child{color:var(--mut);width:42%}
+
+/* Card recensioni sintetiche (pagina /recensioni/) */
+.revs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 20px}
+.rev{background:var(--navy-l);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.rev__top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;gap:8px}
+.rev__name{font-weight:800;color:#fff}
+.rev__stars{color:var(--gold);font-size:13px;letter-spacing:1px;white-space:nowrap}
+.rev p{margin:0;color:#c7d3e8;font-size:13.5px;font-style:italic}
+@media(max-width:640px){.revs{grid-template-columns:1fr}}
+
+/* Match di esempio (pagina /scommesse/) */
+.matchbox{background:var(--navy-l);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:16px 0 22px}
+.matchbox__h{background:var(--navy-ll);color:#fff;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.4px;padding:11px 16px}
+.mrow{display:grid;grid-template-columns:1fr auto;gap:12px;padding:12px 16px;border-top:1px solid var(--line);align-items:center}
+.mrow .lg{font-size:10.5px;font-weight:700;color:var(--gold);text-transform:uppercase;margin-bottom:3px}
+.mrow .tm{font-weight:700;font-size:14.5px;color:#fff}
+.mrow .tm .vs{color:var(--mut);font-weight:600;margin:0 6px;font-size:12px}
+.modds{display:flex;gap:6px}
+.modds .o{background:var(--navy-dd);border:1px solid var(--line);border-radius:6px;padding:7px 0;width:58px;text-align:center}
+.modds .o .k{display:block;font-size:10px;color:var(--mut);font-weight:700;margin-bottom:2px}
+.modds .o .v{font-weight:800;color:var(--gold);font-size:13.5px}
+@media(max-width:560px){.mrow{grid-template-columns:1fr}.modds{justify-content:flex-start}}
+
+/* Carte bonus (pagina /bonus/) */
+.bonuscards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:16px 0 20px}
+.bonuscard{background:var(--navy-l);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.bonuscard .tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--gold)}
+.bonuscard .amt{font-size:20px;font-weight:900;color:#fff;margin:6px 0 4px}
+.bonuscard .d{font-size:13px;color:var(--mut)}
+
+/* Griglia slot (pagina /casino/) */
+.slotgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:16px 0 22px}
+.slotgrid a{display:block;border-radius:10px;overflow:hidden;background:var(--navy-l);border:1px solid var(--line);aspect-ratio:1/1}
+.slotgrid img{width:100%;height:100%;object-fit:cover}

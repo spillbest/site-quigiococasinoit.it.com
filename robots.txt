@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://quigiococasinoit.it.com/sitemap.xml
